@@ -22,8 +22,32 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Gestion de matériel';
-$string['materiel'] = 'Matériel';
-$string['materiel:view'] = 'Voir le matériel';
-$string['materiel:manage'] = 'Gérer le matériel';
-$string['materiel:admin'] = 'Administrer le matériel';
+$string['pluginname'] = 'Equipment Management';
+$string['materiel'] = 'Equipment';
+$string['materiel:view'] = 'View equipment';
+$string['materiel:manage'] = 'Manage equipment';
+$string['materiel:admin'] = 'Administer equipment';
+
+// Statuses.
+$string['status_available'] = 'Available';
+$string['status_in_use'] = 'In use';
+$string['status_maintenance'] = 'Maintenance';
+$string['status_retired'] = 'Retired';
+
+// Actions.
+$string['action_checkout'] = 'Check out';
+$string['action_checkin'] = 'Check in';
+$string['action_maintenance'] = 'Maintenance';
+$string['action_repair'] = 'Repair';
+$string['action_retire'] = 'Retire';
+
+// Fields.
+$string['type'] = 'Type';
+$string['identifier'] = 'Identifier';
+$string['name'] = 'Name';
+$string['description'] = 'Description';
+$string['status'] = 'Status';
+$string['notes'] = 'Notes';
+$string['user'] = 'User';
+$string['action'] = 'Action';
+$string['date'] = 'Date';

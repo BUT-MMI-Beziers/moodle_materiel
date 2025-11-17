@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version information for local_materiel
+ * Upgrade script for local_materiel
  *
  * @package    local_materiel
  * @copyright  2025 Your Name
@@ -24,8 +24,18 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'local_materiel';
-$plugin->version = 2025111701;
-$plugin->requires = 2022041900; // Moodle 4.0
-$plugin->maturity = MATURITY_ALPHA;
-$plugin->release = 'v1.1.0';
+/**
+ * Upgrade the local_materiel plugin
+ *
+ * @param int $oldversion The old version of the plugin
+ * @return bool
+ */
+function xmldb_local_materiel_upgrade($oldversion) {
+    global $DB;
+
+    $dbman = $DB->get_manager();
+
+    // Add future upgrade steps here.
+
+    return true;
+}

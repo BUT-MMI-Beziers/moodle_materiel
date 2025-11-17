@@ -27,3 +27,27 @@ $string['materiel'] = 'Matériel';
 $string['materiel:view'] = 'Voir le matériel';
 $string['materiel:manage'] = 'Gérer le matériel';
 $string['materiel:admin'] = 'Administrer le matériel';
+
+// Statuts.
+$string['status_available'] = 'Disponible';
+$string['status_in_use'] = 'En cours d\'utilisation';
+$string['status_maintenance'] = 'En maintenance';
+$string['status_retired'] = 'Retiré';
+
+// Actions.
+$string['action_checkout'] = 'Sortie';
+$string['action_checkin'] = 'Retour';
+$string['action_maintenance'] = 'Maintenance';
+$string['action_repair'] = 'Réparation';
+$string['action_retire'] = 'Mise au rebut';
+
+// Champs.
+$string['type'] = 'Type';
+$string['identifier'] = 'Identifiant';
+$string['name'] = 'Nom';
+$string['description'] = 'Description';
+$string['status'] = 'Statut';
+$string['notes'] = 'Notes';
+$string['user'] = 'Utilisateur';
+$string['action'] = 'Action';
+$string['date'] = 'Date';
