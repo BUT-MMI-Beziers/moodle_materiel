@@ -44,6 +44,7 @@ $string['action_retire'] = 'Mise au rebut';
 // Champs.
 $string['type'] = 'Type';
 $string['identifier'] = 'Identifiant';
+$string['identifier_help'] = 'Identifiant unique du matériel (numéro de série, code-barres, etc.)';
 $string['name'] = 'Nom';
 $string['description'] = 'Description';
 $string['status'] = 'Statut';
@@ -51,3 +52,50 @@ $string['notes'] = 'Notes';
 $string['user'] = 'Utilisateur';
 $string['action'] = 'Action';
 $string['date'] = 'Date';
+$string['actions'] = 'Actions';
+$string['current_user'] = 'Utilisateur actuel';
+$string['action_by'] = 'Action effectuée par';
+
+// Boutons et liens.
+$string['add_materiel'] = 'Ajouter du matériel';
+$string['edit_materiel'] = 'Modifier le matériel';
+$string['add_type'] = 'Ajouter un type';
+$string['edit_type'] = 'Modifier le type';
+$string['manage_types'] = 'Gérer les types';
+$string['checkout'] = 'Prêter';
+$string['checkin'] = 'Récupérer';
+$string['history'] = 'Historique';
+$string['back_to_list'] = 'Retour à la liste';
+
+// Messages.
+$string['no_materiel'] = 'Aucun matériel disponible';
+$string['no_types'] = 'Aucun type défini';
+$string['no_types_available'] = 'Aucun type disponible. Veuillez d\'abord créer un type.';
+$string['no_history'] = 'Aucun historique disponible pour ce matériel';
+$string['materiel_saved'] = 'Matériel enregistré avec succès';
+$string['type_saved'] = 'Type enregistré avec succès';
+$string['error_saving'] = 'Erreur lors de l\'enregistrement';
+$string['materiel_deleted'] = 'Matériel supprimé avec succès';
+$string['type_deleted'] = 'Type supprimé avec succès';
+$string['error_deleting'] = 'Erreur lors de la suppression';
+$string['checkout_success'] = 'Matériel prêté avec succès';
+$string['checkin_success'] = 'Matériel récupéré avec succès';
+$string['materiel_not_found'] = 'Matériel introuvable';
+$string['type_not_found'] = 'Type introuvable';
+$string['materiel_not_available'] = 'Le matériel n\'est pas disponible pour le prêt';
+$string['materiel_not_in_use'] = 'Le matériel n\'est pas actuellement en cours d\'utilisation';
+$string['type_in_use'] = 'Ce type ne peut pas être supprimé car il est utilisé par du matériel';
+$string['identifier_exists'] = 'Cet identifiant existe déjà';
+
+// Confirmations.
+$string['delete_confirm'] = 'Êtes-vous sûr de vouloir supprimer ce matériel : {$a} ?';
+$string['delete_type_confirm'] = 'Êtes-vous sûr de vouloir supprimer ce type : {$a} ?';
+$string['checkin_confirm'] = 'Êtes-vous sûr de vouloir récupérer ce matériel ?';
+
+// Descriptions.
+$string['checkout_description'] = 'Sélectionnez un utilisateur à qui confier ce matériel.';
+
+// Onglets.
+$string['all_materiel'] = 'Tout le matériel';
+$string['materiel_in_use'] = 'En cours d\'utilisation';
+$string['materiel_available'] = 'Disponible';

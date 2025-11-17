@@ -25,14 +25,43 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
+ * Check if user is member of MMI_materiel cohort
+ *
+ * @param int $userid User ID (default current user)
+ * @return bool True if user is member of the cohort
+ */
+function local_materiel_user_has_access($userid = null) {
+    global $DB, $USER;
+
+    if ($userid === null) {
+        $userid = $USER->id;
+    }
+
+    // Check if MMI_materiel cohort exists.
+    $cohort = $DB->get_record('cohort', ['idnumber' => 'MMI_materiel']);
+    if (!$cohort) {
+        return false;
+    }
+
+    // Check if user is member of the cohort.
+    $ismember = $DB->record_exists('cohort_members', [
+        'cohortid' => $cohort->id,
+        'userid' => $userid,
+    ]);
+
+    return $ismember;
+}
+
+/**
  * Add link to the plugin in the navigation menu
  *
  * @param global_navigation $navigation
  */
 function local_materiel_extend_navigation(global_navigation $navigation) {
-    global $PAGE;
+    global $PAGE, $USER;
 
-    if (has_capability('local/materiel:view', context_system::instance())) {
+    // Check if user has access through cohort membership.
+    if (local_materiel_user_has_access($USER->id)) {
         $node = $navigation->add(
             get_string('materiel', 'local_materiel'),
             new moodle_url('/local/materiel/index.php'),
