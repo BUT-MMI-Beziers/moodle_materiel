@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_materiel';
-$plugin->version = 2025111800;
+$plugin->version = 2025111801;
 $plugin->requires = 2021051700; // Moodle 3.11
 $plugin->maturity = MATURITY_BETA;
-$plugin->release = 'v1.5.0';
+$plugin->release = 'v1.6.0';

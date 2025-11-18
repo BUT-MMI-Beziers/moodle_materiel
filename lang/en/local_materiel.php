@@ -98,5 +98,6 @@ $string['checkout_description'] = 'Select a user to assign this equipment to.';
 // Filters and search.
 $string['filter_by_status'] = 'Filter by status';
 $string['all_materiel'] = 'All equipment';
+$string['all_types'] = 'All types';
 $string['materiel_in_use'] = 'In use';
 $string['materiel_available'] = 'Available';

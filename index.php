@@ -87,6 +87,9 @@ echo html_writer::link(
 );
 echo html_writer::end_div();
 
+// Separator between management buttons and filters.
+echo html_writer::tag('hr', '', ['class' => 'my-4']);
+
 // Filter buttons using links.
 echo html_writer::start_div('mb-3');
 echo html_writer::tag('label', get_string('filter_by_status', 'local_materiel') . ':', ['class' => 'mr-2']);
@@ -148,6 +151,41 @@ if ($filterstatus === 'retired') {
 echo html_writer::link($buildfilterurl('retired'), get_string('status_retired', 'local_materiel'), ['class' => $classes]);
 
 echo html_writer::end_div();
+
+// Type filter with select dropdown.
+echo html_writer::start_tag('form', ['method' => 'get', 'action' => '/local/materiel/index.php', 'class' => 'mb-3']);
+echo html_writer::tag('label', get_string('type', 'local_materiel') . ':', ['class' => 'mr-2', 'for' => 'type-filter']);
+
+// Get all types.
+$types = \local_materiel\materiel_type::get_all();
+$typeoptions = [0 => get_string('all_types', 'local_materiel')];
+foreach ($types as $type) {
+    $typeoptions[$type->id] = $type->name;
+}
+
+// Build select.
+echo html_writer::select(
+    $typeoptions,
+    'type',
+    $filtertype,
+    false,
+    ['id' => 'type-filter', 'class' => 'custom-select d-inline-block', 'style' => 'width: auto;', 'onchange' => 'this.form.submit();']
+);
+
+// Preserve other parameters.
+if ($filterstatus) {
+    echo html_writer::empty_tag('input', ['type' => 'hidden', 'name' => 'status', 'value' => $filterstatus]);
+}
+if ($search) {
+    echo html_writer::empty_tag('input', ['type' => 'hidden', 'name' => 'search', 'value' => $search]);
+}
+if ($sort) {
+    echo html_writer::empty_tag('input', ['type' => 'hidden', 'name' => 'sort', 'value' => $sort]);
+}
+if ($order) {
+    echo html_writer::empty_tag('input', ['type' => 'hidden', 'name' => 'order', 'value' => $order]);
+}
+echo html_writer::end_tag('form');
 
 // Search form using GET.
 echo html_writer::start_tag('form', ['method' => 'get', 'action' => '/local/materiel/index.php', 'class' => 'mb-3']);
