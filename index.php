@@ -142,7 +142,7 @@ if (empty($materiels)) {
         if ($materiel->status == \local_materiel\materiel::STATUS_AVAILABLE) {
             $actions[] = html_writer::link(
                 new moodle_url('/local/materiel/checkout.php', ['id' => $materiel->id]),
-                $OUTPUT->pix_icon('fa-hand-holding', get_string('checkout', 'local_materiel'), 'fontawesome'),
+                $OUTPUT->pix_icon('t/assignroles', get_string('checkout', 'local_materiel')),
                 ['title' => get_string('checkout', 'local_materiel')]
             );
         } else if ($materiel->status == \local_materiel\materiel::STATUS_IN_USE) {
